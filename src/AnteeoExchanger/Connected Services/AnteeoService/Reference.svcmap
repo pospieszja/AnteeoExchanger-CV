@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87aab7de-244b-4bae-949f-699dee0cdd32" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AnteeoServicesXml_WMS.wsdl" MetadataType="Wsdl" ID="e1e27264-995a-4f90-9841-c56aa792d7a6" SourceId="1" SourceUrl="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?wsdl" />
+    <MetadataFile FileName="AnteeoServicesXml_WMS.xsd" MetadataType="Schema" ID="436cb968-b05a-4fdf-8b25-821e39400262" SourceId="1" SourceUrl="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd2" />
+    <MetadataFile FileName="AnteeoServicesXml_WMS1.xsd" MetadataType="Schema" ID="341bfc03-3ae3-4650-ba2d-1de7fe933f3e" SourceId="1" SourceUrl="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd1" />
+    <MetadataFile FileName="AnteeoServicesXml_WMS.disco" MetadataType="Disco" ID="cfb35ab7-a2af-43c1-8a2a-2cc83f489561" SourceId="1" SourceUrl="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?disco" />
+    <MetadataFile FileName="AnteeoServicesXml_WMS2.xsd" MetadataType="Schema" ID="3ca8bf9c-4668-47c4-b7b6-8c468b1316ab" SourceId="1" SourceUrl="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

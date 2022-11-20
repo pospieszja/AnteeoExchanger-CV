@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AnteeoServicesXml_WMS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlSysInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlSysInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlSysInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlSysInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_generateXmlAdvice_InputMessage">
+    <wsdl:part name="parameters" element="tns:generateXmlAdvice" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_generateXmlAdvice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:generateXmlAdviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_modifyXmlAdvice_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyXmlAdvice" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_modifyXmlAdvice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyXmlAdviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_addXmlAdvicePositions_InputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlAdvicePositions" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_addXmlAdvicePositions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlAdvicePositionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_modifyXmlAdvicePositions_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyXmlAdvicePositions" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_modifyXmlAdvicePositions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyXmlAdvicePositionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_setXmlAdviceStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:setXmlAdviceStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_setXmlAdviceStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setXmlAdviceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlStock" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_addXmlProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlProduct" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_addXmlProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_modifyXmlProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyXmlProduct" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_modifyXmlProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyXmlProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_removeXmlProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeXmlProduct" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_removeXmlProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeXmlProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlProductsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlProductsList" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlProductsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlProductsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlExpiredProductsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlExpiredProductsList" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlExpiredProductsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlExpiredProductsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlOperationsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlOperationsStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlOperationsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlOperationsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlOperationsData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlOperationsData" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlOperationsData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlOperationsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_setXmlOperationsCollected_InputMessage">
+    <wsdl:part name="parameters" element="tns:setXmlOperationsCollected" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_setXmlOperationsCollected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setXmlOperationsCollectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlBillingsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlBillingsList" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlBillingsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlBillingsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_addXmlOperationsFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlOperationsFile" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_addXmlOperationsFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addXmlOperationsFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlDictionariesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlDictionariesList" />
+  </wsdl:message>
+  <wsdl:message name="IAnteeoServicesXml_WMS_getXmlDictionariesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getXmlDictionariesListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAnteeoServicesXml_WMS">
+    <wsdl:operation name="getXmlSysInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlSysInfo" message="tns:IAnteeoServicesXml_WMS_getXmlSysInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlSysInfoResponse" message="tns:IAnteeoServicesXml_WMS_getXmlSysInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generateXmlAdvice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/generateXmlAdvice" message="tns:IAnteeoServicesXml_WMS_generateXmlAdvice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/generateXmlAdviceResponse" message="tns:IAnteeoServicesXml_WMS_generateXmlAdvice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyXmlAdvice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlAdvice" message="tns:IAnteeoServicesXml_WMS_modifyXmlAdvice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlAdviceResponse" message="tns:IAnteeoServicesXml_WMS_modifyXmlAdvice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addXmlAdvicePositions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlAdvicePositions" message="tns:IAnteeoServicesXml_WMS_addXmlAdvicePositions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlAdvicePositionsResponse" message="tns:IAnteeoServicesXml_WMS_addXmlAdvicePositions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyXmlAdvicePositions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlAdvicePositions" message="tns:IAnteeoServicesXml_WMS_modifyXmlAdvicePositions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlAdvicePositionsResponse" message="tns:IAnteeoServicesXml_WMS_modifyXmlAdvicePositions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setXmlAdviceStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/setXmlAdviceStatus" message="tns:IAnteeoServicesXml_WMS_setXmlAdviceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/setXmlAdviceStatusResponse" message="tns:IAnteeoServicesXml_WMS_setXmlAdviceStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlStock" message="tns:IAnteeoServicesXml_WMS_getXmlStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlStockResponse" message="tns:IAnteeoServicesXml_WMS_getXmlStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addXmlProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlProduct" message="tns:IAnteeoServicesXml_WMS_addXmlProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlProductResponse" message="tns:IAnteeoServicesXml_WMS_addXmlProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyXmlProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlProduct" message="tns:IAnteeoServicesXml_WMS_modifyXmlProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlProductResponse" message="tns:IAnteeoServicesXml_WMS_modifyXmlProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeXmlProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/removeXmlProduct" message="tns:IAnteeoServicesXml_WMS_removeXmlProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/removeXmlProductResponse" message="tns:IAnteeoServicesXml_WMS_removeXmlProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlProductsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlProductsList" message="tns:IAnteeoServicesXml_WMS_getXmlProductsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlProductsListResponse" message="tns:IAnteeoServicesXml_WMS_getXmlProductsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlExpiredProductsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlExpiredProductsList" message="tns:IAnteeoServicesXml_WMS_getXmlExpiredProductsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlExpiredProductsListResponse" message="tns:IAnteeoServicesXml_WMS_getXmlExpiredProductsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlOperationsStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlOperationsStatus" message="tns:IAnteeoServicesXml_WMS_getXmlOperationsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlOperationsStatusResponse" message="tns:IAnteeoServicesXml_WMS_getXmlOperationsStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlOperationsData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlOperationsData" message="tns:IAnteeoServicesXml_WMS_getXmlOperationsData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlOperationsDataResponse" message="tns:IAnteeoServicesXml_WMS_getXmlOperationsData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setXmlOperationsCollected">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/setXmlOperationsCollected" message="tns:IAnteeoServicesXml_WMS_setXmlOperationsCollected_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/setXmlOperationsCollectedResponse" message="tns:IAnteeoServicesXml_WMS_setXmlOperationsCollected_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlBillingsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlBillingsList" message="tns:IAnteeoServicesXml_WMS_getXmlBillingsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlBillingsListResponse" message="tns:IAnteeoServicesXml_WMS_getXmlBillingsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addXmlOperationsFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlOperationsFile" message="tns:IAnteeoServicesXml_WMS_addXmlOperationsFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlOperationsFileResponse" message="tns:IAnteeoServicesXml_WMS_addXmlOperationsFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getXmlDictionariesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlDictionariesList" message="tns:IAnteeoServicesXml_WMS_getXmlDictionariesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlDictionariesListResponse" message="tns:IAnteeoServicesXml_WMS_getXmlDictionariesList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpBinding_Anteeo_Xml_WMS" type="tns:IAnteeoServicesXml_WMS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getXmlSysInfo">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlSysInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateXmlAdvice">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/generateXmlAdvice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyXmlAdvice">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlAdvice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addXmlAdvicePositions">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlAdvicePositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyXmlAdvicePositions">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlAdvicePositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setXmlAdviceStatus">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/setXmlAdviceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlStock">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addXmlProduct">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyXmlProduct">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/modifyXmlProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeXmlProduct">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/removeXmlProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlProductsList">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlProductsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlExpiredProductsList">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlExpiredProductsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlOperationsStatus">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlOperationsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlOperationsData">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlOperationsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setXmlOperationsCollected">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/setXmlOperationsCollected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlBillingsList">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlBillingsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addXmlOperationsFile">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/addXmlOperationsFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXmlDictionariesList">
+      <soap:operation soapAction="http://tempuri.org/IAnteeoServicesXml_WMS/getXmlDictionariesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AnteeoServicesXml_WMS">
+    <wsdl:port name="basicHttpBinding_Anteeo_Xml_WMS" binding="tns:basicHttpBinding_Anteeo_Xml_WMS">
+      <soap:address location="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

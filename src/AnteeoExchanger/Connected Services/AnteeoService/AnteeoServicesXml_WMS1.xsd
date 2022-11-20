@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="WMS_XmlAdvice_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_ADVICE_HEADER">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_XML_ADVICE_ELEMENTS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_XML_ADVICE_ELEMENT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_XML_ADVICE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_WRONG_DOC_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_SQL_QUERY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_EXISTS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_NOT_EXISTS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_INSERT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_HEADER_INSERT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_STOCK_ABSCENCE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_STOCKMARK_ABSCENCE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_CARRIER_ABSCENCE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_CONTRACTOR_INSERT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_PRODUCT_INSERT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_ELEMENT_INSERT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_ELEMENT_UPDATE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_ELEMENT_ABSCENCE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_ELEMENTS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_SESSION">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_WRONG_ZAM_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_WRONG_OPER_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_WRONG_DIRECTION_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_WRONG_PRIORITY_TYPE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_PRODUCT_UNKNOWN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ERR_DB_ADVICE_PRODUCT_WRONG_DATA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlAdvice_RespEnum" nillable="true" type="tns:WMS_XmlAdvice_RespEnum" />
+  <xs:simpleType name="WMS_XmlTraNagStatus_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_TRANAG_STATUS_HEADER" />
+      <xs:enumeration value="ERR_XML_TRANAG_STATUS" />
+      <xs:enumeration value="ERR_DB_TRANAG_STATUS_NOT_EXISTS" />
+      <xs:enumeration value="ERR_DB_TRANAG_STATUS_WRONG_CHECK_QUANTITY" />
+      <xs:enumeration value="ERR_DB_TRANAG_STATUS_SESSION_NOT_EXIST" />
+      <xs:enumeration value="ERR_DB_TRANAG_STATUS_UPDATE_ERROR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlTraNagStatus_RespEnum" nillable="true" type="tns:WMS_XmlTraNagStatus_RespEnum" />
+  <xs:simpleType name="WMS_XmlStock_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_STOCK_HEADER" />
+      <xs:enumeration value="ERR_XML_STOCK_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_STOCK_ELEMENT" />
+      <xs:enumeration value="ERR_XML_STOCK" />
+      <xs:enumeration value="ERR_DB_STOCK_MARK_ABSCENCE" />
+      <xs:enumeration value="ERR_DB_STOCK_SELECT" />
+      <xs:enumeration value="ERR_DB_STOCK" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlStock_RespEnum" nillable="true" type="tns:WMS_XmlStock_RespEnum" />
+  <xs:simpleType name="WMS_XmlAddProd_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_PRODUCT_HEADER" />
+      <xs:enumeration value="ERR_XML_PRODUCT_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_PRODUCT_ELEMENT" />
+      <xs:enumeration value="ERR_XML_PRODUCT" />
+      <xs:enumeration value="ERR_DB_PRODUCT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_MISSING_CODE" />
+      <xs:enumeration value="ERR_DB_PRODUCT_MISSING_NAME" />
+      <xs:enumeration value="ERR_DB_PRODUCT_EXISTS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_WRONG_UNIT_OF_MEASUREMENT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_WRONG_ASSORTMENT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_VIRTUAL_CARDS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_INSERT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_SQL_QUERY" />
+      <xs:enumeration value="ERR_DB_PRODUCT_ELEMENTS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_WRONG_ADR_STATE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlAddProd_RespEnum" nillable="true" type="tns:WMS_XmlAddProd_RespEnum" />
+  <xs:simpleType name="WMS_XmlModifyProd_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_PRODUCT_HEADER" />
+      <xs:enumeration value="ERR_XML_PRODUCT_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_PRODUCT_ELEMENT" />
+      <xs:enumeration value="ERR_XML_PRODUCT" />
+      <xs:enumeration value="ERR_DB_PRODUCT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_NOT_EXISTS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_WRONG_UNIT_OF_MEASUREMENT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_WRONG_ASSORTMENT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_VIRTUAL_CARDS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_UPDATE" />
+      <xs:enumeration value="ERR_DB_PRODUCT_SQL_QUERY" />
+      <xs:enumeration value="ERR_DB_PRODUCT_ELEMENTS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_WRONG_ADR_STATE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlModifyProd_RespEnum" nillable="true" type="tns:WMS_XmlModifyProd_RespEnum" />
+  <xs:simpleType name="WMS_XmlRemoveProd_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_PRODUCT_HEADER" />
+      <xs:enumeration value="ERR_XML_PRODUCT_ELEMENT" />
+      <xs:enumeration value="ERR_XML_PRODUCT" />
+      <xs:enumeration value="ERR_DB_PRODUCT" />
+      <xs:enumeration value="ERR_DB_PRODUCT_VIRTUAL_CARDS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_NOT_EXISTS" />
+      <xs:enumeration value="ERR_DB_PRODUCT_REMOVE" />
+      <xs:enumeration value="ERR_DB_PRODUCT_SQL_QUERY" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlRemoveProd_RespEnum" nillable="true" type="tns:WMS_XmlRemoveProd_RespEnum" />
+  <xs:simpleType name="WMS_XmlGetProdList_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_PRODLIST_HEADER" />
+      <xs:enumeration value="ERR_XML_PRODLIST_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_PRODLIST_ELEMENT" />
+      <xs:enumeration value="ERR_XML_PRODLIST" />
+      <xs:enumeration value="ERR_DB_PRODLIST_SELECT" />
+      <xs:enumeration value="ERR_DB_PRODLIST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlGetProdList_RespEnum" nillable="true" type="tns:WMS_XmlGetProdList_RespEnum" />
+  <xs:simpleType name="WMS_XmlOperStatus_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_OPERSTATUS_HEADER" />
+      <xs:enumeration value="ERR_XML_OPERSTATUS" />
+      <xs:enumeration value="ERR_XML_OPERSTATUS_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_OPERSTATUS_ELEMENT" />
+      <xs:enumeration value="ERR_DB_OPERSTATUS" />
+      <xs:enumeration value="ERR_DB_OPERSTATUS_SELECT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlOperStatus_RespEnum" nillable="true" type="tns:WMS_XmlOperStatus_RespEnum" />
+  <xs:simpleType name="WMS_XmlOperData_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_OPERDATA" />
+      <xs:enumeration value="ERR_XML_OPERDATA_HEADER" />
+      <xs:enumeration value="ERR_XML_OPERDATA_ELEMENTS" />
+      <xs:enumeration value="ERR_DB_OPERDATA_HEADER" />
+      <xs:enumeration value="ERR_DB_OPERDATA" />
+      <xs:enumeration value="ERR_DB_OPERDATA_OPER" />
+      <xs:enumeration value="ERR_DB_OPERDATA_HEADER_SELECT" />
+      <xs:enumeration value="ERR_DB_OPERDATA_ELEMENT_SELECT" />
+      <xs:enumeration value="ERR_DB_OPERDATA_ELEMENTS_SELECT" />
+      <xs:enumeration value="ERR_DB_OPERDATA_NOPARAMS" />
+      <xs:enumeration value="OK" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlOperData_RespEnum" nillable="true" type="tns:WMS_XmlOperData_RespEnum" />
+  <xs:simpleType name="WMS_XmlOperCollected_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_OPERCOLLECTED" />
+      <xs:enumeration value="ERR_XML_OPERCOLLECTED_HEADER" />
+      <xs:enumeration value="ERR_XML_OPERCOLLECTED_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_OPERCOLLECTED_ELEMENT" />
+      <xs:enumeration value="ERR_DB_OPERCOLLECTED" />
+      <xs:enumeration value="ERR_DB_OPERCOLLECTED_UPDATE" />
+      <xs:enumeration value="ERR_DB_OPERCOLLECTED_UPDATES" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlOperCollected_RespEnum" nillable="true" type="tns:WMS_XmlOperCollected_RespEnum" />
+  <xs:simpleType name="WMS_XmlGetBillList_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_BILLSLIST_HEADER" />
+      <xs:enumeration value="ERR_XML_BILLSLIST_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_BILLSLIST_ELEMENT" />
+      <xs:enumeration value="ERR_XML_BILLSLIST" />
+      <xs:enumeration value="ERR_DB_BILLSLIST_SELECT" />
+      <xs:enumeration value="ERR_DB_BILLSLIST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlGetBillList_RespEnum" nillable="true" type="tns:WMS_XmlGetBillList_RespEnum" />
+  <xs:simpleType name="WMS_XmlGetExpiredProd_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_EXPIREDPRODLIST_HEADER" />
+      <xs:enumeration value="ERR_XML_EXPIREDPRODLIST_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_EXPIREDPRODLIST_ELEMENT" />
+      <xs:enumeration value="ERR_XML_EXPIREDPRODLIST" />
+      <xs:enumeration value="ERR_DB_EXPIREDPRODLIST_SELECT" />
+      <xs:enumeration value="ERR_DB_EXPIREDPRODLIST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlGetExpiredProd_RespEnum" nillable="true" type="tns:WMS_XmlGetExpiredProd_RespEnum" />
+  <xs:simpleType name="WMS_XmlGetDictList_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_DICTLIST_HEADER" />
+      <xs:enumeration value="ERR_XML_DICTLIST_ELEMENTS" />
+      <xs:enumeration value="ERR_XML_DICTLIST_ELEMENT" />
+      <xs:enumeration value="ERR_XML_DICTLIST" />
+      <xs:enumeration value="ERR_DB_DICTLIST_SELECT" />
+      <xs:enumeration value="ERR_DB_DICTLIST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlGetDictList_RespEnum" nillable="true" type="tns:WMS_XmlGetDictList_RespEnum" />
+  <xs:simpleType name="WMS_XmlOperFileParts_RespEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERR_XML_OPERFILE" />
+      <xs:enumeration value="ERR_XML_OPERFILE_HEADER" />
+      <xs:enumeration value="ERR_DB_OPERFILE" />
+      <xs:enumeration value="ERR_DB_OPERFILE_TRANSACTION" />
+      <xs:enumeration value="ERR_DB_OPERFILE_OPER_NOT_EXISTS" />
+      <xs:enumeration value="ERR_DB_OPERFILE_WRONG_TRNID" />
+      <xs:enumeration value="ERR_DB_OPERFILE_WRONG_NAME" />
+      <xs:enumeration value="ERR_DB_OPERFILE_WRONG_TYPE" />
+      <xs:enumeration value="ERR_DB_OPERFILE_WRONG_FILE_PART" />
+      <xs:enumeration value="ERR_DB_OPERFILE_EXISTS" />
+      <xs:enumeration value="ERR_DB_OPERFILE_MISSING_ORDINAL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WMS_XmlOperFileParts_RespEnum" nillable="true" type="tns:WMS_XmlOperFileParts_RespEnum" />
+  <xs:complexType name="AuthData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConnString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loginError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="masterFid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usrId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthData" nillable="true" type="tns:AuthData" />
+</xs:schema>

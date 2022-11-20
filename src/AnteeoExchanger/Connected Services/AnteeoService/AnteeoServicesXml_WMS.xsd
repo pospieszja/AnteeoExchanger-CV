@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://8.8.8.8:7502/AnteeoServicesXml_WMS.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" />
+  <xs:element name="getXmlSysInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q1:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlSysInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlSysInfoResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generateXmlAdvice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGenAdvice" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q2:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generateXmlAdviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="generateXmlAdviceResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyXmlAdvice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlModifyAdvice" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q3:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyXmlAdviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyXmlAdviceResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addXmlAdvicePositions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlAddAdvicePositions" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q4:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addXmlAdvicePositionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addXmlAdvicePositionsResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyXmlAdvicePositions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlModifyAdvicePositions" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q5:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyXmlAdvicePositionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyXmlAdvicePositionsResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setXmlAdviceStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlSetAdviceStatus" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q6:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setXmlAdviceStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setXmlAdviceStatusResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlStock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetStock" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q7:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlStockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlStockResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addXmlProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlAddProd" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q8:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addXmlProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addXmlProductResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyXmlProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlModifyProd" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q9:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifyXmlProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="modifyXmlProductResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeXmlProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlRemoveProd" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q10:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="removeXmlProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="removeXmlProductResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlProductsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetProdList" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q11:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlProductsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlProductsListResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlExpiredProductsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetExpiredProdList" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q12:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlExpiredProductsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlExpiredProductsListResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlOperationsStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetOperStatus" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q13:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlOperationsStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlOperationsStatusResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlOperationsData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetOperData" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q14:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlOperationsDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlOperationsDataResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setXmlOperationsCollected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlSetOperCollected" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q15:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setXmlOperationsCollectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setXmlOperationsCollectedResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlBillingsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetBillingsList" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q16:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlBillingsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlBillingsListResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addXmlOperationsFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlAddOperFilePart" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q17:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addXmlOperationsFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addXmlOperationsFileResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlDictionariesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlGetDictionariesList" nillable="true" type="xs:base64Binary" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ANTEEO_WCF" minOccurs="0" name="authData" nillable="true" type="q18:AuthData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getXmlDictionariesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getXmlDictionariesListResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
